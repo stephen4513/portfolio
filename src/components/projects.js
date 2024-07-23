@@ -16,7 +16,7 @@ function Projects(){
             </div>
             <div className={styles.blockproject}>
                  <p className={styles.title}>This portfolio</p>
-                <img className={styles.image} src="/images/portfoliopic.jpg" />
+                <img className={styles.image} src="/images/portfoliopic.jpg"  alt="Stephen Monahan"/>
                 <p className={styles.description}>Made this portfolio to showcase my projects and skills </p>
                 <ul className={styles.skills}>
                     <li>HTML</li>
