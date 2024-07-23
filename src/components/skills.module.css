@@ -1,0 +1,108 @@
+/* Skills */
+.skills {
+  color: var(--color-text);
+  margin-top: 79px;
+
+ 
+  overflow: hidden; /* Prevent overflow */
+  
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Carousel Container */
+.carouselContainer {
+  width: 100%;
+  overflow: hidden; /* Hide the overflowing content */
+  position: relative;
+  margin-top: 20px;
+  border-top: solid var(--color-dark) 5px;
+  border-bottom: solid var(--color-dark) 5px;
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: var(--color-bg);
+  white-space: nowrap;
+  position: relative;
+}
+
+.logosSlide {
+  display: inline-block;
+  animation: slide 45s linear infinite;
+}
+
+.skill {
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  z-index: 1;
+  margin: 0 20px; /* Adjust the gap between items */
+  text-align: center;
+}
+
+.skillImageContainer {
+  background-color: var(--color-secondary);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.skillImageContainer img {
+  width: 75px;
+}
+
+.skillName {
+  font-size: 25px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+/* Gradient overlays for the carousel edges */
+.gradient {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  background: linear-gradient(to right, var(--color-background), transparent);
+}
+
+.gradientLeft {
+  left: 0;
+}
+
+.gradientRight {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media screen and (max-width: 830px) {
+  .logosSlide {
+      animation: slide 60s linear infinite; /* Slower animation for smaller screens */
+  }
+}

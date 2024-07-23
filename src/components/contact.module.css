@@ -1,0 +1,51 @@
+.contact {
+    color: var(--color-text);
+    padding: 40px 10%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linkedin {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.linkedin a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.email {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}

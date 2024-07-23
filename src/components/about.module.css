@@ -1,0 +1,69 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 80px 120px 80px; /* Shorthand for padding */
+    margin: 0 0 100px 0;
+    flex-wrap: wrap; /* Allow flex items to wrap if necessary */
+}
+
+.text {
+    flex: 1;
+    margin-right: 100px;
+    padding-right: 100px;
+    min-width: 300px; /* Ensure text does not get too narrow */
+}
+
+.text h2 {
+    margin-bottom: 10px;
+    font-size: 39px;
+    font-family: 'Arial', sans-serif;
+}
+
+.text p {
+    line-height: 1.6;
+    font-size: 25px;
+    font-family: 'Arial', sans-serif;
+}
+
+.pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 5px;
+}
+
+.pics img {
+    max-width: 100%; /* Ensures images scale down */
+    width: 300px; /* Maintains aspect ratio */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgb(0, 0, 0);
+    border: 10px solid var(--color-dark);
+}
+
+.hkn, .coding, .hardware {
+    width: 150px;
+    height: auto;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+        padding: 20px 2%;
+    }
+
+    .text {
+        margin-right: 0;
+        padding-right: 0;
+        max-width: 100%; /* Allow text to take full width on small screens */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .pics img {
+        width: 80%; /* Adjust image width for smaller screens */
+    }
+}
