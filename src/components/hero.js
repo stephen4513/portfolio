@@ -9,12 +9,17 @@ function Hero() {
     };
 
     return (
-        <div className={styles.hero}>
+        <div
+            className={styles.hero}
+            style={{
+                backgroundImage: `url(${process.env.PUBLIC_URL}/images/richard.jpg)`
+            }}
+        >
             <header className={styles.header}>
                 <div className={styles.menu}>
                     <img 
                         className={styles.menuBtn} 
-                        src='/images/threelines.png' 
+                        src={`${process.env.PUBLIC_URL}/images/threelines.png`}
                         alt="menu-button"
                         onClick={() => setMenuOpen(!menuOpen)}
                     />
@@ -36,3 +41,4 @@ function Hero() {
 }
 
 export default Hero;
+
