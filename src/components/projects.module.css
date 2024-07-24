@@ -1,83 +1,115 @@
+body, html {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 .projects {
     padding: 40px;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 50px;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
     text-align: center;
+    overflow-x: hidden; /* Prevent horizontal overflow within the projects section */
 }
 
 .projects h1 {
     font-size: 39px;
-    margin-bottom: 2rem;
+    margin-bottom: 50px;
     font-family: 'Arial', sans-serif;
-    
 }
 
 .bigproject {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Space between the blocks */
     padding-top: 50px;
-    
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .blockproject {
-    background: linear-gradient(to bottom, #3c9ea0,#385092);
+    background: linear-gradient(to bottom, #f08282, #a73c3c);
     border: 2px solid #000000;
-    border-radius: 10px;
+    border-radius: 0px;
     padding: 20px;
-    margin: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
     word-wrap: break-word;
-    width: 100%;
-    max-width: 300px;
+    width: calc(50% - 20px); /* Two columns with space in between */
     box-shadow: 0 10px 12px rgba(0, 0, 0, 0.608);
+    display: flex; /* Align items in a row */
+    align-items: flex-start; /* Align items to the top */
     text-align: left;
-    flex-direction: column;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.image, .video {
+    flex: 0 0 40%; /* Occupy 40% of the block’s width */
+    height: auto;
+    max-width: 100%; /* Ensure the image does not exceed the block width */
+    max-height: 200px; /* Constrain the height */
+    margin-right: 20px; /* Space between image/video and text */
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.197);
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.content {
+    flex: 1; /* Occupy the remaining space */
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text content to the top */
 }
 
 .title {
-    font-size: 1.7rem;
+    font-size: 1.5rem; /* Adjusted font size */
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Reduced margin */
     font-family: 'Arial', sans-serif;
-    text-align: center;
-   
-}
-
-.image {
-    width:100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.197);
-    
-    
+    text-align: left; /* Align text to the left */
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.408);
 }
 
 .description {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1rem; /* Adjusted font size */
+    margin-bottom: 0.5rem; /* Reduced margin */
     font-family: 'Arial', sans-serif;
-    font-weight:bold;
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
 }
 
 .skills {
     list-style: none;
     padding: 0;
+    display: flex; /* Display skills in a row */
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 .skills li {
-    display: inline-block;
-    background: #1e3269;
+    background: #691e1e;
     border-radius: 5px;
-    padding: 5px 10px;
-    margin: 5px;
+    padding: 3px 8px; /* Reduced padding */
+    margin: 3px; /* Reduced margin */
     font-family: 'Arial', sans-serif;
     color: rgb(221, 221, 221);
+    font-size: 0.85rem; /* Reduced font size */
+    flex: 0 0 auto; /* Prevent flex items from growing */
+}
 
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .blockproject {
+        width: 100%; /* Full width on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .image, .video {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 1rem;
+        margin-right: 0; /* Remove right margin on smaller screens */
+    }
+
+    .content {
+        padding-left: 0; /* Remove left padding on smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
 }

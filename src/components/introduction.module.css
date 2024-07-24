@@ -1,24 +1,27 @@
 .introtextContainer {
     display: flex;
-    align-items: center; /* Vertically centers the content */
-    justify-content: space-between; /* Distributes space between the text and image */
+    align-items: center;
+    justify-content: space-between;
     padding: 100px 80px 0 80px; 
-    margin: 90px 0 300px 0; 
-    flex-wrap: wrap; /* Allow flex items to wrap if necessary */
+    margin: 90px 0 40px 0; 
+    flex-wrap: wrap;
 }
 
 .introtext {
-    flex: 1; /* Ensure the text takes up the remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns text to the left */
-    min-width: 300px; /* Ensure text does not get too narrow */
+    align-items: flex-start;
+    min-width: 300px;
     font-family: 'Arial', sans-serif;
 }
-.typeEffect{
+
+.typeEffect {
     display: flex;
     height: 90px;
-   align-items: center;
+    align-items: center;
+    color:    rgb(75, 4, 4);
+   /* color: rgb(45, 73, 112);*/
 }
 
 .introtext h1 {
@@ -40,10 +43,14 @@
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    border-radius: 100%;
+    border-radius: 0;
     border: solid var(--color-dark) 6px;
-    box-shadow: 0 0 4px 0 rgb(0, 0, 0); /* Corrected box-shadow */
-    margin-left: 20px; /* Add some space between the text and the image */
+    box-shadow: 0 0 4px 0 rgb(0, 0, 0);
+    margin-left: 20px;
+}
+
+.name{
+    color:  rgb(75, 4, 4);
 }
 
 /* Animation for Hero Image */
@@ -60,11 +67,12 @@
 }
 
 /* Media Queries for smaller screens */
+/* Media Queries for smaller screens */
 @media (max-width: 768px) {
     .introtextContainer {
         flex-direction: column; /* Stack items vertically on smaller screens */
         align-items: center;
-        padding: 20px 20px 0 20px; /* Adjust padding for smaller screens */
+        padding: 20px 20px 0 20px;
     }
 
     .introtext {
@@ -74,8 +82,59 @@
         text-align: center; /* Center text on smaller screens */
     }
 
+    .introtext h1 {
+        font-size: 40px;
+    }
+
+    .introtext h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .typeEffect {
+        height: auto;
+        justify-content: center; /* Center the typewriter effect */
+    }
+
     .image {
-        width: 80%; /* Adjust image width for smaller screens */
-        margin-left: 0; /* Remove left margin */
+        width: 80%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .introtextContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 10px 0 10px;
+        margin-top: 60px;
+    }
+
+    .introtext {
+        margin-right: 0;
+        padding-right: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .introtext h1 {
+        font-size: 30px;
+    }
+
+    .introtext h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .typeEffect {
+        height: auto;
+        justify-content: center; /* Center the typewriter effect */
+    }
+
+    .image {
+        margin-top: 20px;
+        width: 80%;
+        height: auto;
+        margin-left: 0;
     }
 }

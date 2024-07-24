@@ -1,9 +1,9 @@
 /* Skills */
 .skills {
   color: var(--color-text);
-  margin-top: 79px;
-
- 
+  margin-top: 40px;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
   overflow: hidden; /* Prevent overflow */
   
 }
@@ -103,6 +103,6 @@
 /* Responsive */
 @media screen and (max-width: 830px) {
   .logosSlide {
-      animation: slide 60s linear infinite; /* Slower animation for smaller screens */
+      animation: slide 20s linear infinite; /* Slower animation for smaller screens */
   }
 }

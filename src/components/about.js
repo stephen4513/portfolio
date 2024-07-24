@@ -1,28 +1,40 @@
-import React from 'react'
-import styles from './about.module.css'
+import React from 'react';
+import styles from './about.module.css';
 
-function About(){
+function About() {
     return (
         <section id='about' className={styles.about}>
-            <div className={styles.text}>
-                <h2>About me</h2>
-                <p>
-                Hey there! I am currently a junior at Rutgers University majoring in computer engineering.
-                 I am mainly interested in full stack development and machine learning, but I am also interested in hardware.
-                 This includes circuit design and computer architecture. I am also part of IEEE Eta Kappa Nu,
-                 Rutgers's electrical and computer engineering honors society where I get the chance to attend several conferences
-                 about machine learning. Whether you're interested in exploring my projects, sharing your thoughts, or discussing potential collaborations,
-                 I'm excited to connect with you. Feel free to reach out, let's embrace progress, passion, and the journey of continuous learning together!
-                </p>
+            <div className={styles.line}></div>
+            <div className={styles.row}>
+                <img className={styles.gif} src='/images/coding.gif' alt='AI Gif'/>
+                <div className={`${styles.text} ${styles.text1}`}>
+                    <h2>About <span className={styles.high}>me</span></h2>
+                    <p>
+                        I am currently a Junior at <span className={styles.high}>Rutgers University</span>, passionate about full stack development and machine learning.
+                    </p>
+                </div>
             </div>
-            <div className={styles.pics}>
-                <img className={styles.hkn} src='/images/hkn.jpg'  alt='Stephen Monahan'/>
-                <img className={styles.coding} src='/images/coding.jpg' alt='Stephen Monahan'/>
-                <img className={styles.hardware} src='/images/hardware.jpg' alt='Stephen Monahan' />
+            <div className={styles.row}>
+                <div className={`${styles.text} ${styles.text2}`}>
+                    <p>
+                        I am also part of Rutgers's electrical and computer engineering <span className={styles.high}>honors society</span> where 
+                        I get the chance to learn from professionals.
+                    </p>
+                </div>
+                <img className={styles.gif} src='/images/ai.gif' alt='Coding Gif'/>
             </div>
+            <div className={styles.row}>
+                <img className={styles.gif} src='/images/hardware.gif' alt='Hardware Gif'/>
+                <div className={`${styles.text} ${styles.text3}`}>
+                    <p>
+                        I am also interested in <span className={styles.high}>hardware</span>, this includes computer architecture and circuit design!
+                    </p>
+                </div>
+            </div>
+            <div className={styles.line}></div>
         </section>
-
     );
 }
 
 export default About;
+

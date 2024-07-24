@@ -8,13 +8,21 @@ function Contact() {
             <div className={styles.contactInfo}>
                 <div className={styles.linkedin}>
                     <a href='https://www.linkedin.com/in/stephen-monahan-90580b264/' target='_blank' rel='noopener noreferrer'>
-                        <img className={styles.icon} src='/images/linkedin.png' alt='LinkedIn' />
+                        <img className={styles.icon} src='/images/linkedin.png' alt='Stephen Monahan' />
                         <span>LinkedIn</span>
                     </a>
                 </div>
+                <div className={styles.linkedin}>
+                    <a href='https://github.com/stephen4513' target='_blank' rel='noopener noreferrer'>
+                        <img className={styles.icon} src='/images/github.png' alt='Stephen Monahan' />
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                
                 <div className={styles.email}>
                     <span>stephen.monahan4513@gmail.com</span>
                 </div>
+                
             </div>
         </section>
     );
