@@ -7,7 +7,7 @@ function Projects() {
     useEffect(() => {
         AOS.init({
             duration: 600,
-            offset: 500, // Adjust this value as needed
+            offset: 100, // Adjust this value as needed
         });
     }, []);
 
