@@ -5,7 +5,7 @@ function Robinhood() {
     return(
         <div className={styles.blockproject} data-aos="fade-right">
             <video className={styles.video} autoPlay loop muted >
-                <source src="/images/robinhood.mp4" type="video/mp4" />
+                <source src="/images/robinhood2.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className={styles.content}>
