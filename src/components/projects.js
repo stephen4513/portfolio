@@ -7,6 +7,7 @@ import Portfolio from '../projects/portfolio';
 import Pantry from "../projects/pantry";
 import Brainstorm from "../projects/brainstorm";
 import Robinhood from "../projects/robinhood";
+import Flashie from "../projects/flashie";
 
 function Projects() {
     useEffect(() => {
@@ -25,6 +26,7 @@ function Projects() {
                 <Pantry />
                 <Brainstorm />
                 <Robinhood />
+                <Flashie />
             </div>
         </section>
     );
